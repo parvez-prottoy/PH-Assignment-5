@@ -5,17 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
     <title>Dev Board</title>
+    <link rel="stylesheet" href="styles/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- tailwind config -->
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            colors: {},
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+            colors: {
+              primary: "#1E1E1E",
+              secondary: "#00303C",
+              bgPrimary: "#F4F7FF",
+              bgSecondary:
+                "linear-gradient(90deg, rgba(55,82,253,1) 0%, rgba(108,127,250,1) 53%, rgba(155,168,248,1) 100%)",
+              bgInfo: "#3752FD",
+            },
           },
         },
       };
     </script>
   </head>
-  <body></body>
+  <body class="font-poppins">
+    <h1>Hello</h1>
+  </body>
 </html>
