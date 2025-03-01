@@ -28,7 +28,10 @@
       };
     </script>
   </head>
-  <body class="font-poppins bg-bgPrimary text-primary">
+  <body
+    style="transition: 1s cubic-bezier(0.215, 0.61, 0.355, 1)"
+    class="font-poppins bg-bgPrimary text-primary"
+  >
     <!------------------- header section start ------------------->
     <header class="mt-6">
       <div
@@ -49,7 +52,10 @@
             <img class="w-8 h-8" src="assets/checkbox.png" alt="" />
             <h2 id="complete-count" class="text-2xl font-bold">0</h2>
           </div>
-          <div class="p-3 bg-bgPrimary rounded-full">
+          <div
+            id="change-bg"
+            class="p-3 bg-bgPrimary rounded-full cursor-pointer"
+          >
             <img class="w-10 h-10" src="assets/theme-btn.png" alt="" />
           </div>
         </div>
@@ -124,6 +130,7 @@
     <!-- js -->
     <script src="script/tasks.js"></script>
     <script src="script/utils/dateFormatter.js"></script>
+    <script src="script/utils/util.js"></script>
     <script src="script/main.js"></script>
   </body>
 </html>

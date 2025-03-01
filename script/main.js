@@ -1,5 +1,14 @@
 document.querySelector("#current-date").innerText = dateFormatter();
 
+// change bg color of the body
+document.querySelector("#change-bg").addEventListener("click", function () {
+  const img = document.querySelector("#change-bg img");
+  img.style.transform += "rotate(90deg)";
+  const hexColor = generateHexColor();
+  console.log(hexColor);
+  document.body.style.backgroundColor = hexColor;
+});
+
 const completeBtns = document.querySelectorAll(".complete-btn");
 const completeCountElement = document.querySelector("#complete-count");
 const remainingCountElement = document.querySelector("#remaining-count");
