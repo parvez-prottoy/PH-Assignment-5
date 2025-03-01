@@ -1,7 +1,9 @@
+document.querySelector("#current-date").innerText = dateFormatter();
+
 const completeBtns = document.querySelectorAll(".complete-btn");
 const completeCountElement = document.querySelector("#complete-count");
 const remainingCountElement = document.querySelector("#remaining-count");
-console.log(completeBtns);
+
 for (const btn of completeBtns) {
   btn.addEventListener("click", function (even) {
     alert("Task Completed");
