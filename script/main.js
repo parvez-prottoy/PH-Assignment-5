@@ -13,10 +13,11 @@ const completeBtns = document.querySelectorAll(".complete-btn");
 const completeCountElement = document.querySelector("#complete-count");
 const remainingCountElement = document.querySelector("#remaining-count");
 
+// completed task
+const activityLogsElement = document.querySelector("#activity-logs");
 for (const btn of completeBtns) {
   btn.addEventListener("click", function (even) {
     alert("Task Completed");
-
     completeCountElement.textContent =
       Number(completeCountElement.textContent) + 1;
     remainingCountElement.textContent =
@@ -28,5 +29,22 @@ for (const btn of completeBtns) {
     if (Number(remainingCountElement.textContent) === 0) {
       alert("All Tasks Completed");
     }
+
+    const taskName =
+      even.target.parentElement.parentElement.querySelector("h3").textContent;
+    const currentTime = new Date().toLocaleTimeString("en-US", {
+      hour12: true,
+    });
+
+    activityLogsElement.innerHTML += `
+              <div class="bg-bgPrimary p-6 rounded-xl mb-4">
+                <p class="text-secondary/70">
+                  You have Complete The Task Add ${taskName} at ${currentTime}
+                </p>
+              </div>`;
   });
 }
+// clear all logs
+document.querySelector("#clear-logs").addEventListener("click", function () {
+  activityLogsElement.innerHTML = "";
+});

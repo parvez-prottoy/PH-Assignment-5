@@ -15,12 +15,14 @@
             fontFamily: {
               poppins: ["Poppins", "sans-serif"],
             },
+            backgroundImage: {
+              bgSecondary:
+                "linear-gradient(90deg, #3752FD 0%, #6C7FFA 53%,#9BA8F8 100%)",
+            },
             colors: {
               primary: "#1E1E1E",
               secondary: "#00303C",
               bgPrimary: "#F4F7FF",
-              bgSecondary:
-                "linear-gradient(90deg, rgba(55,82,253,1) 0%, rgba(108,127,250,1) 53%, rgba(155,168,248,1) 100%)",
               bgInfo: "#3752FD",
             },
           },
@@ -81,10 +83,10 @@
                   <h4 id="remaining-count" class="text-3xl font-bold">6</h4>
                 </div>
               </div>
-              <div class="flex-1 bg-bgPrimary p-6 rounded-xl">
+              <div class="flex-1 bg-bgSecondary p-6 rounded-xl">
                 <div class="flex items-center gap-4">
                   <img src="assets/board.png" alt="" />
-                  <h3 class="text-2xl font-semibold">
+                  <h3 class="text-2xl font-semibold text-white">
                     Discover Something <br />
                     New Today!
                   </h3>
@@ -116,13 +118,19 @@
             <div class="flex flex-col justify-center items-center gap-4">
               <div class="flex justify-center mt-6 gap-2">
                 <img src="assets/activity.png" alt="" />
-                <h3>Activity Log</h3>
+                <h3 class="font-medium">Activity Log</h3>
               </div>
-              <button class="bg-bgInfo px-6 py-2 text-white rounded-lg">
+              <button
+                id="clear-logs"
+                class="bg-bgInfo px-6 py-2 text-white rounded-lg"
+              >
                 Clear Histories
               </button>
             </div>
             <hr class="border-dashed border-1 mt-6" />
+            <div id="activity-logs" class="p-6">
+              <!-- single log -->
+            </div>
           </div>
         </div>
       </section>
