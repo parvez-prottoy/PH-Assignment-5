@@ -64,7 +64,7 @@ for (const task of tasks) {
                     <small>Deadline</small>
                     <p>${task.date}</p>
                   </div>
-                  <button class="bg-bgInfo px-6 py-2 text-white rounded-lg">
+                  <button class="complete-btn bg-bgInfo px-6 py-2 text-white rounded-lg">
                     Completed
                   </button>
                 </div>
