@@ -49,6 +49,8 @@ const tasks = [
   },
 ];
 const tasksElement = getElement("#tasks");
+const totalTasksCount = getElement("#remaining-count");
+totalTasksCount.innerText = tasks.length;
 for (const task of tasks) {
   tasksElement.innerHTML += `
             <div class="bg-bgPrimary p-6 rounded-lg space-y-4">
