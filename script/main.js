@@ -46,3 +46,9 @@ for (const btn of completeBtns) {
 document.querySelector("#clear-logs").addEventListener("click", function () {
   activityLogsElement.innerHTML = "";
 });
+
+// new-today
+const newTodayElement = getElement("#new-today");
+newTodayElement.addEventListener("click", function () {
+  window.location.href = "../blog.html";
+});
