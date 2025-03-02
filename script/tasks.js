@@ -48,7 +48,7 @@ const tasks = [
     date: "26 March 2025",
   },
 ];
-const tasksElement = document.querySelector("#tasks");
+const tasksElement = getElement("#tasks");
 for (const task of tasks) {
   tasksElement.innerHTML += `
             <div class="bg-bgPrimary p-6 rounded-lg space-y-4">
@@ -56,15 +56,17 @@ for (const task of tasks) {
                   ${task.label}
                 </h5>
                 <h3 class="text-xl font-medium">${task.name}</h3>
-                <p class="bg-white p-2 rounded-md h-24 overflow-hidden text-ellipsis text-primary/40">
-                  ${task.description}
+                <p title='${
+                  task.description
+                }' class="bg-white p-2 rounded-md overflow-hidden text-primary/40">
+                  ${task.description.slice(0, 85)}...
                 </p>
                 <div class="flex justify-between items-center">
                   <div>
                     <small>Deadline</small>
                     <p>${task.date}</p>
                   </div>
-                  <button class="complete-btn bg-bgInfo px-6 py-2 text-white rounded-lg">
+                  <button class="complete-btn bg-bgInfo font-medium px-6 py-2 text-white rounded-lg">
                     Completed
                   </button>
                 </div>
