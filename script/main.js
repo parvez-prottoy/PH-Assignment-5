@@ -50,5 +50,5 @@ document.querySelector("#clear-logs").addEventListener("click", function () {
 // new-today
 const newTodayElement = getElement("#new-today");
 newTodayElement.addEventListener("click", function () {
-  window.location.href = "../blog.html";
+  window.location.replace("../blog.html");
 });
