@@ -1,6 +1,6 @@
 // back to home page
 document.querySelector("#back-desk").addEventListener("click", function () {
-  window.location.href = "/index.html";
+  window.location.href = "../index.html";
 });
 
 // questions data
